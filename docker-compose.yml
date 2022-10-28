@@ -1,0 +1,11 @@
+version: "3"
+services:
+  hello:
+    image: hello
+    container_name: hello
+    restart: unless-stopped
+    volumes:
+      - /home/cael/projects/hello/public/:/usr/src/app/public
+      - /home/cael/projects/hello/db/:/usr/src/app/db
+    ports:
+      - 8090:8090

@@ -6,8 +6,8 @@ from flask import Flask, request, send_from_directory
 from flask_cors import CORS
 
 port = 8090
-endpoint = '/uploads/'
 db_folder = 'db/'
+endpoint = '/uploads/'
 upload_folder = 'public/uploads/'
 
 app = Flask(__name__, static_folder='public')

@@ -12,10 +12,11 @@ upload_folder = 'public/uploads/'
 
 app = Flask(__name__, static_folder='public')
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['MAX_CONTENT_LENGTH'] = 5 * 1000 * 1000
 CORS(app, resources={r"*": {"origins": "*"}})
 query = Query()
 
-    
+
 def storeFiles(path, files):
     if os.path.exists(path):
         shutil.rmtree(path)

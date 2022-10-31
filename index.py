@@ -71,14 +71,14 @@ def route_delete(id):
     return {"status": False, "msg": 'Failed'}
 
 
-@ app.route('/api/v1/all', methods=['GET'])
+@ app.route('/api/v1/uploads', methods=['GET'])
 def route_all():
     db = TinyDB(db_folder+'db.json')
     get_records = db.all()
     return {"status": True, "msg": get_records[::-1]}
 
 
-@ app.route('/api/v1/submit', methods=["POST"])
+@ app.route('/api/v1/upload', methods=["POST"])
 def route_submit():
     if request.files and request.form and 'preview' in request.files and 'sources' in request.files and 'id' in request.form and 'info' in request.form:
         id = request.form['id']

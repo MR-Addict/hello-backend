@@ -1,11 +1,11 @@
 version: "3"
 services:
-  hello:
-    image: hello
-    container_name: hello
+  hello-backend:
+    image: hello-backend
+    container_name: hello-backend
     restart: unless-stopped
     volumes:
-      - /home/cael/projects/hello/public/:/usr/src/app/public
-      - /home/cael/projects/hello/db/:/usr/src/app/db
+      - /home/cael/projects/hello-backend/public/:/usr/src/app/public
+      - /home/cael/projects/hello-backend/db/:/usr/src/app/db
     ports:
       - 8090:8090

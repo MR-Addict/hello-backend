@@ -5,7 +5,7 @@ services:
     container_name: hello-backend
     restart: unless-stopped
     volumes:
-      - /home/cael/projects/hello-backend/public/:/usr/src/app/public
-      - /home/cael/projects/hello-backend/db/:/usr/src/app/db
+      - ./public/:/usr/src/app/public
+      - ./db/:/usr/src/app/db
     ports:
       - 8090:8090

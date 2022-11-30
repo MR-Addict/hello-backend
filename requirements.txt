@@ -1,3 +1,4 @@
-flask
-flask-cors
+fastapi
 tinydb
+uvicorn
+python-multipart
